@@ -3,13 +3,13 @@ from typing import List
 
 from selenium_base_new.base import SeleniumBase
 
-
 class HomepageNav(SeleniumBase):
 
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
         self.nav_links: str = "#mainNavigationFobs>li"
+        self.NAV_LINK_TEXT = 'Women,Men,Kids,Home,Beauty,Shoes,Handbags,Jewelry,Furniture,Toys,Gifts,Trending,Sale'
 
     def get_nav_links(self) -> List[WebElement]:
         return self.are_visiable('css', self.nav_links, 'Header Navigation links')

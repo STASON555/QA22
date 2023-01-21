@@ -12,7 +12,7 @@ class HomepageNav(SeleniumBase):
   def get_nav_links(self) -> List[WebElement]:
       return self.are_visiable('css', self.nav_links, 'Header Navigation links')
 
-  def get_nav_links_text(self) ->str:
+  def get_nav_links_text(self) -> str:
       nav_links = self.get_nav_links()
       nav_links_text = [link.text for link in nav_links]
       return ",".join(nav_links_text)
