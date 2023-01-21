@@ -1,7 +1,8 @@
 from selenium.webdriver.remote.webelement import WebElement
 from typing import List
 
-from selenium_base_new.base import SeleniumBase
+from selenium_base.selenium_base import SeleniumBase
+
 
 class HomepageNav(SeleniumBase):
 
@@ -12,7 +13,7 @@ class HomepageNav(SeleniumBase):
         self.NAV_LINK_TEXT = 'Women,Men,Kids,Home,Beauty,Shoes,Handbags,Jewelry,Furniture,Toys,Gifts,Trending,Sale'
 
     def get_nav_links(self) -> List[WebElement]:
-        return self.are_visiable('css', self.nav_links, 'Header Navigation links')
+        return self.are_visible('css', self.nav_links, 'Header Navigation links')
 
     def get_nav_links_text(self) -> str:
         nav_links = self.get_nav_links()
